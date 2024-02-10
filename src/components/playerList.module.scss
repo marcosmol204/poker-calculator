@@ -1,0 +1,38 @@
+@import "../constants";
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.playersContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.playerContainer {
+  list-style: none;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 80px auto 50px;
+  align-items: center;
+  column-gap: 20px;
+  font-size: x-large;
+  border-bottom: 3px solid $border-light;
+  padding-bottom: 20px;
+}
+.playerData {
+  display: flex;
+  flex-direction: column;
+  font-size: large;
+
+  input {
+    padding: 10px;
+    transition: border-color 0.3s;
+    font-size: large;
+    background-color: $main-surface-tertiary;
+    color: $text-secondary;
+    &:focus {
+    }
+  }
+}

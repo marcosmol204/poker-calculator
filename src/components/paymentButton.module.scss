@@ -1,0 +1,17 @@
+@import "../constants";
+
+.mainContainer {
+  width: 75%;
+  border-top: 2px solid $border-medium;
+  padding-top: 25px;
+  .button {
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: large;
+    font-weight: bold;
+  }
+}
