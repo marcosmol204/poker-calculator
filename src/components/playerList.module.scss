@@ -27,6 +27,10 @@
   flex-direction: column;
   font-size: large;
 
+  @media (max-width: 400px) {
+    width: 100%;
+  }
+
   input {
     padding: 10px;
     transition: border-color 0.3s;
