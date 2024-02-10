@@ -18,7 +18,7 @@ function PlayerList({ players, updatePlayer, deletePlayer }) {
           <li key={index} className={styles.playerContainer}>
             {player.name}
             <div className={styles.playerData}>
-              סה״כ קניות:
+              סה״כ קנה:
               <input
                 type="number"
                 value={player.bought}
