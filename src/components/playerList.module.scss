@@ -20,6 +20,7 @@
   font-size: x-large;
   border-bottom: 3px solid $border-light;
   padding-bottom: 20px;
+  max-width: 100vw;
 }
 .playerData {
   display: flex;
@@ -32,7 +33,8 @@
     font-size: large;
     background-color: $main-surface-tertiary;
     color: $text-secondary;
-    &:focus {
+    @media (max-width: 400px) {
+      max-width: 140px;
     }
   }
 }
