@@ -28,7 +28,7 @@ function PaymentButton({ players }) {
           <div key={i} className={styles.paymentsContainer}>
             <div>{el.from} </div>
             <div>צריך להעביר ל{el.for}</div>
-            <div>סה״כ :{el.amount} ש״ח</div>
+            <div>סה״כ :{el.amount} </div>
           </div>
         );
       })}
