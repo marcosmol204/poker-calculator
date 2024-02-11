@@ -12,8 +12,14 @@ function PaymentButton({ players }) {
     setPayments(result);
   };
 
+  const totalChips = players.reduce((acc, curr) => {
+    acc += curr.bought;
+    return acc;
+  }, 0);
+
   return (
     <div className={styles.mainContainer}>
+      <div className={styles.total}>סה״כ בקופה:{totalChips} </div>
       <button onClick={handleCalculatePayment} className={styles.button}>
         חשב קיזוזים
       </button>

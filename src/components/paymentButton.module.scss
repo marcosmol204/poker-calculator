@@ -3,7 +3,12 @@
 .mainContainer {
   width: 75%;
   border-top: 2px solid $border-medium;
-  padding-top: 25px;
+  padding-top: 10px;
+
+  .total {
+    margin-bottom: 10px;
+    font-size: medium;
+  }
   .button {
     width: 100%;
     padding: 10px 20px;
@@ -18,5 +23,4 @@
 
 .paymentsContainer {
   padding: 10px;
-  display: flex;
 }
