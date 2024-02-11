@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { calculatePayments } from "../logic/calculatePayments";
 import styles from "./paymentButton.module.scss";
+
 function PaymentButton({ players }) {
   const [payments, setPayments] = useState([]);
   const handleCalculatePayment = () => {
@@ -18,10 +19,10 @@ function PaymentButton({ players }) {
       </button>
       {payments.map((el, i) => {
         return (
-          <div key={i} style={{ display: "flex" }}>
+          <div key={i} className={styles.paymentsContainer}>
             <div>{el.from} </div>
             <div>צריך להעביר ל{el.for}</div>
-            <div>סה״כ {el.amount}</div>
+            <div>סה״כ :{el.amount} ש״ח</div>
           </div>
         );
       })}
