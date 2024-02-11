@@ -13,7 +13,7 @@ function AddPlayerForm({ addPlayer }) {
     <form onSubmit={handleSubmit} className={styles.mainContainer}>
       <label>הוסף שחקן בשם</label>
       <input
-        type="number"
+        type="text"
         value={name}
         onChange={(e) => setName(e.target.value)}
         className={styles.input}
