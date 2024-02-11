@@ -17,7 +17,7 @@ function AddPlayerForm({ addPlayer }) {
         value={name}
         onChange={(e) => setName(e.target.value)}
         className={styles.input}
-        placeholder="אייל 'מיסמאצ' והב"
+        placeholder="...אייל 'מיסמאצ' והב"
         required
       />
       <button type="submit" className={styles.button}>
