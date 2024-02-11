@@ -1,8 +1,5 @@
 @import "../constants";
 
-$input-border-color: #3498db;
-$input-focus-border-color: #2c3e50;
-
 .mainContainer {
   display: flex;
   flex-direction: column;
@@ -32,8 +29,5 @@ $input-focus-border-color: #2c3e50;
     background-color: $main-surface-tertiary;
     color: $text-secondary;
     border-radius: 8px;
-    b &:focus {
-      border-color: $input-focus-border-color;
-    }
   }
 }
