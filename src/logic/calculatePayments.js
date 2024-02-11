@@ -8,7 +8,7 @@ export const calculatePayments = (players) => {
     return acc;
   }, 0);
 
-  if (totalChips > totalBought) {
+  if (totalChips !== totalBought) {
     return null;
   }
 
