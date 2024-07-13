@@ -1,5 +1,3 @@
-@import "../constants";
-
 .mainContainer {
   display: flex;
   flex-direction: column;
@@ -23,11 +21,11 @@
   .input {
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid $border-medium;
+    //border: 1px solid $border-medium;
     transition: border-color 0.3s;
     font-size: large;
-    background-color: $main-surface-tertiary;
-    color: $text-secondary;
+    //background-color: $main-surface-tertiary;
+    //color: $text-secondary;
     border-radius: 8px;
   }
 }

@@ -1,12 +1,10 @@
-@import "constants";
-
 .mainContainer {
   height: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
-  color: $text-primary;
+  //  color: $text-primary;
 
   .pokerImg {
     margin-top: 10px;

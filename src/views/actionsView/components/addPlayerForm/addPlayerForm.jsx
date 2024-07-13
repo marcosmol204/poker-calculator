@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./addPlayerForm.module.scss";
-function AddPlayerForm({ addPlayer }) {
+
+export function AddPlayerForm({ addPlayer }) {
   const [name, setName] = useState("");
 
   const handleSubmit = (e) => {
@@ -26,5 +27,3 @@ function AddPlayerForm({ addPlayer }) {
     </form>
   );
 }
-
-export default AddPlayerForm;

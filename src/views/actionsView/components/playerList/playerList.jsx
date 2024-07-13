@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import styles from "./playerList.module.scss";
 
-function PlayerList({ players, updatePlayer, deletePlayer }) {
+export function PlayerList({ players, updatePlayer, deletePlayer }) {
   const handleboughtChange = (index, value) => {
     updatePlayer(index, { bought: parseFloat(value) });
   };

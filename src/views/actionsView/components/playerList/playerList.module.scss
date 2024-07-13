@@ -1,5 +1,3 @@
-@import "../constants";
-
 .mainContainer {
   display: flex;
   flex-direction: column;
@@ -18,7 +16,7 @@
   align-items: center;
   column-gap: 20px;
   font-size: x-large;
-  border-bottom: 3px solid $border-light;
+  //border-bottom: 3px solid $border-light;
   padding-bottom: 20px;
   max-width: 100vw;
 }
@@ -35,8 +33,8 @@
     padding: 10px;
     transition: border-color 0.3s;
     font-size: large;
-    background-color: $main-surface-tertiary;
-    color: $text-secondary;
+    //background-color: $main-surface-tertiary;
+    //color: $text-secondary;
     @media (max-width: 400px) {
       max-width: 140px;
     }

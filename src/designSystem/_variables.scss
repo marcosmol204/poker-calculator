@@ -1,0 +1,87 @@
+$font-sizes: (
+  "3xl": [42,
+  52],
+  "2xl": [28,
+  36],
+  "xl": [20,
+  28],
+  "l": [18,
+  24],
+  "base": [16,
+  24],
+  "s": [14,
+  20],
+  "xs": [12,
+  16],
+);
+
+$font-weights: (
+  "regular": "400",
+  "bold": "600",
+);
+
+$elevations: (
+  "level-1": "0px 3px 14px -2px rgba(0, 0, 0, 0.12)",
+  "level-2": "0px 3px 15px -4px rgba(0, 0, 0, 0.22)",
+  "level-3": "0px 0px 35px -10px rgba(0, 0, 0, 0.25)",
+  "top":
+    "0px 1px 1px 0px rgba(0, 0, 0, 0.01), 0px 3px 3px 0px rgba(0, 0, 0, 0.03), 0px 5px 6px 0px rgba(0, 0, 0, 0.03), 0px 7px 11px 0px rgba(0, 0, 0, 0.04)",
+  "bottom":
+    "0px -4px 11px rgba(0, 0, 0, 0.04), 0px -3px 6px rgba(0, 0, 0, 0.03), 0px -1px 3px rgba(0, 0, 0, 0.03), 0px -0.5px 1px rgba(0, 0, 0, 0.01), 0px -0.1px 0.5px rgba(0, 0, 0, 0.005)",
+  "floating": "0px -2px 12px rgba(0, 0, 0, 0.08)",
+);
+
+$colors: (
+  "primary": #00120a,
+  "on-primary": #ffffff,
+  "primary-container": #fff0ed,
+  "on-primary-container": #00120a,
+
+  "background": #ffffff,
+  "app-background": #f2f4f7,
+  "on-background": #091218,
+  "on-background-variant": #515b61,
+  "on-background-placeholder": #838d94,
+
+  "inverse-background": "#091218",
+  "on-inverse-background": "#FFFFFF",
+
+  "surface": #f8f9fb,
+  "surface-variant": #e8ebee,
+  "on-surface": #091218,
+  "on-surface-variant": #091218,
+  "on-surface-placeholder": #091218,
+
+  "outline": "#778088",
+  "outline-variant": "#DCE3E9",
+
+  "accent": #ff8163,
+  "on-accent": #00120a,
+  "accent-container": #ffdbd1,
+  "on-accent-container": #00120a,
+
+  "disabled": #a4acb5,
+  "on-disabled": #f8f9fb,
+  "disabled-container": #eceef1,
+  "on-disabled-container": #89929a,
+
+  "success": #2a840a,
+  "on-success": #f7ffee,
+  "success-container": #c2f7aa,
+  "on-success-container": #0b3800,
+
+  "error": #bb171b,
+  "on-error": #fff4f4,
+  "error-container": #ffe9e9,
+  "on-error-container": #7e0000,
+
+  "warning": #ffc331,
+  "on-warning": #2c2002,
+  "warning-container": #ffeaa2,
+  "on-warning-container": #322300,
+
+  "info": #005082,
+  "on-info": #f2f6ff,
+  "info-container": #dfedfe,
+  "on-info-container": #002641,
+);

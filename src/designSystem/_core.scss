@@ -1,0 +1,12 @@
+@use "breakpoints" as *;
+@use "tokens" as *;
+@use "typography" as *;
+
+html {
+  font-size: var(--ds-text-base-font-size);
+}
+
+html,
+body {
+  font-family: var(--ds-font-family);
+}

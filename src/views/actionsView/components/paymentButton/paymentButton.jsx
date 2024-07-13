@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { calculatePayments } from "../logic/calculatePayments";
+import { calculatePayments } from "../../../../logic/calculatePayments";
 import styles from "./paymentButton.module.scss";
 
-function PaymentButton({ players }) {
+export function PaymentButton({ players }) {
   const [payments, setPayments] = useState([]);
   const handleCalculatePayment = () => {
     const result = calculatePayments(players);

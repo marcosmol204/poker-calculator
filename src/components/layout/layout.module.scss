@@ -1,0 +1,21 @@
+.container {
+  .titleContainer {
+    text-align: center;
+    .title {
+      font-size: var(--ds-font-size-xl);
+      line-height: var(--ds-line-height-xl);
+      font-weight: bold;
+    }
+  }
+
+  .navigationContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    .navigationElement a {
+      font-size: var(--ds-font-size-l);
+      line-height: var(--ds-line-height-l);
+    }
+  }
+}
