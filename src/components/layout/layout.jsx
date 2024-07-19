@@ -1,23 +1,41 @@
-import React from "react";
-import { Link, Outlet } from "react-router-dom";
-import styles from "./layout.module.scss";
+import {
+  Box,
+  Text,
+  Divider,
+  Center,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+} from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 export const Layout = () => {
   return (
-    <div className={styles.container}>
-      <div className={styles.titleContainer}>
-        <div className={styles.title}>מחשבון פוקר</div>
-      </div>
-      <div className={styles.navigationContainer}>
-        <div className={styles.navigationElement}>
-          <Link to="/">דשבורד</Link>
-        </div>
-        <div className={styles.navigationElement}>
-          <Link to="/actions">פעולות</Link>
-        </div>
-      </div>
-      <hr />
+    <Box>
+      <Center>
+        <Text fontSize="xl" lineHeight="xl" fontWeight="bold">
+          Poker Calculator
+        </Text>
+      </Center>
+      <Center>
+        <Breadcrumb separator={"-"}>
+          <BreadcrumbItem>
+            <BreadcrumbLink as={Link} to="/" fontSize="l" lineHeight="l">
+              Dashboard
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+
+          <BreadcrumbItem>
+            <BreadcrumbLink as={Link} to="/actions" fontSize="l" lineHeight="l">
+              Game Management
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+        </Breadcrumb>
+      </Center>
+
+      <Divider />
       <Outlet />
-    </div>
+    </Box>
   );
 };

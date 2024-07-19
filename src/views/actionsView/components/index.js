@@ -1,3 +1,4 @@
+export * from "./addJetonsForm";
 export * from "./addPlayerForm";
-export * from "./paymentButton";
-export * from "./playerList";
+export * from "./editPlayerForm";
+export * from "./jetonsTransfers";

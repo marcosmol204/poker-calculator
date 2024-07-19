@@ -11,8 +11,8 @@ test("Total chips greater than total bought should return null", () => {
 
   const result = calculatePayments(players);
 
-  // Since total chips are greater than total bought, the function should return null
-  expect(result).toBeNull();
+  // Since total chips are greater than total bought, the function should return []
+  expect(result).toStrictEqual([]);
 });
 
 // Test case for a scenario where players need to be paid

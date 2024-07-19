@@ -9,7 +9,7 @@ export const calculatePayments = (players) => {
   }, 0);
 
   if (totalChips !== totalBought) {
-    return null;
+    return [];
   }
 
   const playersToBePaid = players
