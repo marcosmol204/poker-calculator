@@ -15,7 +15,7 @@ import {
 } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 export function AddJetonsForm({ players, onSubmit }) {
-  const { register, handleSubmit, formState, watch } = useForm();
+  const { register, handleSubmit, formState } = useForm();
 
   return (
     <FormControl as="form" onSubmit={handleSubmit(onSubmit)}>
