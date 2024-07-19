@@ -3,7 +3,7 @@ import { expect, test } from "vitest";
 import { calculatePayments } from "../src/logic/calculatePayments";
 
 // Test case for a scenario where total chips are greater than total bought
-test("Total chips greater than total bought should return null", () => {
+test("Total chips greater than total bought should return error", () => {
   const players = [
     { name: "Player1", chips: 100, bought: 50 },
     { name: "Player2", chips: 200, bought: 100 },
@@ -12,7 +12,7 @@ test("Total chips greater than total bought should return null", () => {
   const result = calculatePayments(players);
 
   // Since total chips are greater than total bought, the function should return []
-  expect(result).toStrictEqual([]);
+  expect(result).toStrictEqual([[], -150]);
 });
 
 // Test case for a scenario where players need to be paid
@@ -26,7 +26,10 @@ test("2 players, 1 need to be paid", () => {
 
   // Assert the result based on your expectations
   // You might want to customize this based on the specific logic in your function
-  expect(result).toEqual([{ for: "Player1", amount: 20, from: "Player2" }]);
+  expect(result).toStrictEqual([
+    [{ for: "Player1", amount: 20, from: "Player2" }],
+    null,
+  ]);
 });
 
 test("2 players, no payments", () => {
@@ -39,7 +42,7 @@ test("2 players, no payments", () => {
 
   // Assert the result based on your expectations
   // You might want to customize this based on the specific logic in your function
-  expect(result).toEqual([]);
+  expect(result).toStrictEqual([[], null]);
 });
 
 test("3 players, 1 need to be paid", () => {
@@ -54,8 +57,11 @@ test("3 players, 1 need to be paid", () => {
   // Assert the result based on your expectations
   // You might want to customize this based on the specific logic in your function
   expect(result).toEqual([
-    { for: "Player1", from: "Player2", amount: 20 },
-    { for: "Player1", from: "Player3", amount: 20 },
+    [
+      { for: "Player1", from: "Player2", amount: 20 },
+      { for: "Player1", from: "Player3", amount: 20 },
+    ],
+    null,
   ]);
 });
 
@@ -70,8 +76,11 @@ test("4 players game, 2 need to be paid", () => {
   const result = calculatePayments(players);
 
   expect(result).toEqual([
-    { for: "Player1", from: "Player3", amount: 40 },
-    { for: "Player1", from: "Player4", amount: 10 },
-    { for: "Player2", from: "Player4", amount: 10 },
+    [
+      { for: "Player1", from: "Player3", amount: 40 },
+      { for: "Player1", from: "Player4", amount: 10 },
+      { for: "Player2", from: "Player4", amount: 10 },
+    ],
+    null,
   ]);
 });
