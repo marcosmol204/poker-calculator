@@ -104,7 +104,7 @@ export function ActionsView() {
         <AccordionItem>
           <AccordionButton>
             <AccordionIcon />
-            <Text as="b">Add jetons</Text>
+            <Text as="b">Issue jetons</Text>
           </AccordionButton>
           <AccordionPanel p={4}>
             <AddJetonsForm
@@ -116,7 +116,7 @@ export function ActionsView() {
         <AccordionItem>
           <AccordionButton>
             <AccordionIcon />
-            <Text as="b">Update player</Text>
+            <Text as="b">Count jetons</Text>
           </AccordionButton>
           <AccordionPanel p={4}>
             <EditPlayerForm

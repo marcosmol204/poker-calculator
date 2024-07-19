@@ -9,7 +9,7 @@ export const calculatePayments = (players) => {
   }, 0);
 
   if (totalChips !== totalBought) {
-    return [];
+    return [[], totalBought - totalChips];
   }
 
   const playersToBePaid = players
@@ -81,5 +81,5 @@ export const calculatePayments = (players) => {
       }
     }
   }
-  return paymentDetails;
+  return [paymentDetails, null];
 };

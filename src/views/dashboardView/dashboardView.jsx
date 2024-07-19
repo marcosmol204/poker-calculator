@@ -54,7 +54,7 @@ export const DashboardView = () => {
       </SimpleGrid>
 
       <Center paddingTop={"16px"}>
-        <Text>Jackpot:{total}</Text>
+        <Text>Issued jetons: {total}</Text>
       </Center>
     </Box>
   );
