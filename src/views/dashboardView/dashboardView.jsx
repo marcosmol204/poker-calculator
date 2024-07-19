@@ -34,11 +34,18 @@ export const DashboardView = () => {
               as={Flex}
               justifyContent={"center"}
               alignItems={"center"}
+              borderRadius="md"
+              boxShadow="lg"
+              bg="gray.50"
             >
-              <StatLabel as={Center}>{player.name}</StatLabel>
-              <StatNumber as={Center}>{player.chips}</StatNumber>
+              <StatLabel as={Center} fontWeight="bold">
+                {player.name}
+              </StatLabel>
+              <StatNumber as={Center} color="teal.500">
+                {player.chips}
+              </StatNumber>
 
-              <StatHelpText>
+              <StatHelpText color="gray.600">
                 {!percentageChanged.startsWith("0.00") && (
                   <StatArrow
                     type={
@@ -53,7 +60,7 @@ export const DashboardView = () => {
         })}
       </SimpleGrid>
 
-      <Center paddingTop={"16px"}>
+      <Center paddingTop={"16px"} color="gray.500">
         <Text>Issued jetons: {total}</Text>
       </Center>
     </Box>

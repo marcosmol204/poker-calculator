@@ -88,14 +88,26 @@ export function ActionsView() {
       });
     }
   };
+  const confirmAction = (message, action) => {
+    const confirmed = window.confirm(message);
+    if (confirmed) action();
+  };
 
   return (
-    <Box>
-      <Accordion>
+    <Box
+      maxW="container.md"
+      mx="auto"
+      borderRadius="md"
+      boxShadow="lg"
+      bg="gray.50"
+    >
+      <Accordion allowToggle>
         <AccordionItem>
           <AccordionButton>
             <AccordionIcon />
-            <Text as="b">Add player</Text>
+            <Text as="b" ml={2}>
+              Add player
+            </Text>
           </AccordionButton>
           <AccordionPanel p={4}>
             <AddPlayerForm onSubmit={addPlayerOnSubmit} />
@@ -104,58 +116,58 @@ export function ActionsView() {
         <AccordionItem>
           <AccordionButton>
             <AccordionIcon />
-            <Text as="b">Issue jetons</Text>
+            <Text as="b" ml={2}>
+              Issue jetons
+            </Text>
           </AccordionButton>
           <AccordionPanel p={4}>
             <AddJetonsForm
               players={players}
               onSubmit={addBoughtJetonsOnSubmit}
-            ></AddJetonsForm>
+            />
           </AccordionPanel>
         </AccordionItem>
         <AccordionItem>
           <AccordionButton>
             <AccordionIcon />
-            <Text as="b">Count jetons</Text>
+            <Text as="b" ml={2}>
+              Count jetons
+            </Text>
           </AccordionButton>
           <AccordionPanel p={4}>
             <EditPlayerForm
               players={players}
               onSubmit={editPlayerOnSubmit}
               getPlayer={getPlayer}
-            ></EditPlayerForm>
+            />
           </AccordionPanel>
         </AccordionItem>
         <AccordionItem>
           <AccordionButton>
             <AccordionIcon />
-            <Text as="b">Game actions</Text>
+            <Text as="b" ml={2}>
+              Game actions
+            </Text>
           </AccordionButton>
-          <AccordionPanel p={4} as={Center}>
-            <ButtonGroup>
-              <Button
-                colorScheme="teal"
-                variant="solid"
-                onClick={() => {
-                  const confimated = window.confirm("Are you sure?");
-                  if (!confimated) return;
-                  onOpen();
-                }}
-              >
-                Finish Game
-              </Button>
-              <Button
-                colorScheme="red"
-                variant="solid"
-                onClick={() => {
-                  const confimated = window.confirm("Are you sure?");
-                  if (!confimated) return;
-                  deleteAllPlayer();
-                }}
-              >
-                Reset Game
-              </Button>
-            </ButtonGroup>
+          <AccordionPanel p={4}>
+            <Center>
+              <ButtonGroup>
+                <Button
+                  colorScheme="teal"
+                  onClick={() => confirmAction("Are you sure?", onOpen)}
+                >
+                  Finish Game
+                </Button>
+                <Button
+                  colorScheme="red"
+                  onClick={() =>
+                    confirmAction("Are you sure?", deleteAllPlayer)
+                  }
+                >
+                  Reset Game
+                </Button>
+              </ButtonGroup>
+            </Center>
           </AccordionPanel>
         </AccordionItem>
       </Accordion>
