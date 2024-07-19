@@ -16,8 +16,6 @@ import {
 import { useForm } from "react-hook-form";
 export function AddJetonsForm({ players, onSubmit }) {
   const { register, handleSubmit, formState, watch } = useForm();
-  const name = watch("name");
-  console.log(name);
 
   return (
     <FormControl as="form" onSubmit={handleSubmit(onSubmit)}>
